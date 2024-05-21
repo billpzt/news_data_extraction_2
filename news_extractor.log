@@ -1,0 +1,34 @@
+2024-05-21 17:14:21,116 - NewsExtractor - INFO - Opened the news site
+2024-05-21 17:26:16,368 - NewsExtractor - INFO - Opened the news site
+2024-05-21 17:30:27,934 - NewsExtractor - INFO - Opened the news site
+2024-05-21 17:31:00,600 - NewsExtractor - ERROR - Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 45, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\__init__.py", line 610, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+2024-05-21 17:31:00,601 - NewsExtractor - ERROR - local variable 'search_button' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 45, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\__init__.py", line 610, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 54, in click_on_search_button
+    self.browser.click_button_when_visible(search_button)
+UnboundLocalError: local variable 'search_button' referenced before assignment
+2024-05-21 17:33:07,711 - NewsExtractor - INFO - Opened the news site
+2024-05-21 17:49:04,859 - NewsExtractor - INFO - Opened the news site
