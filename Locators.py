@@ -10,12 +10,15 @@ class Locators():
     # article_image_xpath = './/img[@class="image"]'
     search_button_xpath = '//button[@class="SearchOverlay-search-button"]'
     searchbar_xpath = "//input[contains(@name, 'q')]"
+
     dropdown_xpath = "//select[contains(@name, 's')]"
     category_menu_xpath = '//div[@class="SearchFilter-heading"]'
 
-    next_results_xpath = '//div[@class="search-results-module-next-page"]'
-    articles_xpath = '//ul[@class="search-results-module-results-menu"]/li'
-    article_title_xpath = './/div/h3[@class="promo-title"]'
-    article_description_xpath = './/p[@class="promo-description"]'
-    article_date_xpath = './/p[@class="promo-timestamp"]'
-    article_image_xpath = './/img[@class="image"]'
+    articles_xpath = '//div[@class="PagePromo-content"]'
+    # article_title_xpath = '//div[@class="PageList-items"]//bsp-custom-headline//a/span[@class="PagePromoContentIcons-text"]'
+    article_title_xpath = './/span[@class="PagePromoContentIcons-text"]'
+    # article_description_xpath = '//div[contains(@class, "PagePromo-description")]/a/span[contains(@class, "PagePromoContentIcons-text")]'
+    article_description_xpath = './/span[contains(@class, "PagePromoContentIcons-text")]'
+    article_date_xpath = './/span[contains(@class, "Timestamp-template")]'
+    article_image_xpath = './/img[@class="Image"]'
+    next_results_xpath = '//div[@class="Pagination-nextPage"]'
