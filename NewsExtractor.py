@@ -76,8 +76,13 @@ class NewsExtractor:
     
     def click_on_news_category(self):
         try:
+            category_menu = WebDriverWait(self.browser, 10).until(
+                EC.element_to_be_clickable(self.browser.find_element(loc.category_menu_xpath))
+            )
+            category_menu.click()
+
             category_text = self.news_category
-            category_checkbox_xpath = f'//label/span[contains(text(), "{category_text}")]'
+            category_checkbox_xpath = f'//div/div/label[span[contains(text(), {category_text})]]/input'
             WebDriverWait(self.browser.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, category_checkbox_xpath))
             )
@@ -87,7 +92,7 @@ class NewsExtractor:
         except Exception as error:
             self.logger.warning(f"Unable to click on checkbox - {str(error)}")
         
-        # time.sleep(5)
+        # time.sleep(25)
 
     def click_on_next_page(self):
         next_results_arrow = self.browser.find_element(loc.next_results_xpath)
@@ -165,7 +170,7 @@ class NewsExtractor:
         self.click_on_search_button()
         self.enter_search_phrase()
         self.filter_newest()
-        # self.click_on_news_category()
+        self.click_on_news_category()
         # self.paging_for_extraction()
         # Utils.save_to_excel(self.results)
-        self.close_site()
+        # self.close_site()

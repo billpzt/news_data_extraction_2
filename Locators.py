@@ -11,6 +11,7 @@ class Locators():
     search_button_xpath = '//button[@class="SearchOverlay-search-button"]'
     searchbar_xpath = "//input[contains(@name, 'q')]"
     dropdown_xpath = "//select[contains(@name, 's')]"
+    category_menu_xpath = '//div[@class="SearchFilter-heading"]'
 
     next_results_xpath = '//div[@class="search-results-module-next-page"]'
     articles_xpath = '//ul[@class="search-results-module-results-menu"]/li'
