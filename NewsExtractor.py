@@ -83,7 +83,7 @@ class NewsExtractor:
 
             category_text = self.news_category
             category_checkbox_xpath = f'//div/div/label[span[contains(text(), {category_text})]]/input'
-            WebDriverWait(self.browser.driver, 10).until(
+            WebDriverWait(self.browser.driver, 20).until(
                 EC.presence_of_element_located((By.XPATH, category_checkbox_xpath))
             )
             checkbox = self.browser.find_element(category_checkbox_xpath)

@@ -216,3 +216,225 @@ Stacktrace:
 
 2024-05-22 00:04:40,533 - NewsExtractor - INFO - Opened the news site
 2024-05-22 11:56:09,596 - NewsExtractor - INFO - Opened the news site
+2024-05-22 13:27:34,352 - NewsExtractor - INFO - Opened the news site
+2024-05-22 13:30:02,041 - NewsExtractor - INFO - Opened the news site
+2024-05-22 13:30:05,719 - NewsExtractor - WARNING - Unable to click on checkbox - Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x004DC113+48259]
+	(No symbol) [0x0046CA41]
+	(No symbol) [0x00360A17]
+	(No symbol) [0x00365B58]
+	(No symbol) [0x00367652]
+	(No symbol) [0x003676D0]
+	(No symbol) [0x003A253E]
+	(No symbol) [0x00397282]
+	(No symbol) [0x003C0D9C]
+	(No symbol) [0x00396E25]
+	(No symbol) [0x003C1034]
+	(No symbol) [0x003D9B9C]
+	(No symbol) [0x003C0B36]
+	(No symbol) [0x0039570D]
+	(No symbol) [0x003962CD]
+	GetHandleVerifier [0x007965A3+2908435]
+	GetHandleVerifier [0x007D3BBB+3159851]
+	GetHandleVerifier [0x005750CB+674875]
+	GetHandleVerifier [0x0057B28C+699900]
+	(No symbol) [0x00476244]
+	(No symbol) [0x00472298]
+	(No symbol) [0x0047242C]
+	(No symbol) [0x00464BB0]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x77D1BE3B+107]
+	RtlClearBits [0x77D1BDBF+191]
+
+2024-05-22 13:50:46,106 - NewsExtractor - INFO - Opened the news site
+2024-05-22 13:50:47,546 - NewsExtractor - ERROR - Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x004DC113+48259]
+	(No symbol) [0x0046CA41]
+	(No symbol) [0x00360A17]
+	(No symbol) [0x003A69EC]
+	(No symbol) [0x003A4E82]
+	(No symbol) [0x003A2CEB]
+	(No symbol) [0x003A22E7]
+	(No symbol) [0x00397389]
+	(No symbol) [0x003C0D9C]
+	(No symbol) [0x00396E25]
+	(No symbol) [0x003C1034]
+	(No symbol) [0x003D9B9C]
+	(No symbol) [0x003C0B36]
+	(No symbol) [0x0039570D]
+	(No symbol) [0x003962CD]
+	GetHandleVerifier [0x007965A3+2908435]
+	GetHandleVerifier [0x007D3BBB+3159851]
+	GetHandleVerifier [0x005750CB+674875]
+	GetHandleVerifier [0x0057B28C+699900]
+	(No symbol) [0x00476244]
+	(No symbol) [0x00472298]
+	(No symbol) [0x0047242C]
+	(No symbol) [0x00464BB0]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x77D1BE3B+107]
+	RtlClearBits [0x77D1BDBF+191]
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 48, in click_on_search_button
+    search_button.click()
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x004DC113+48259]
+	(No symbol) [0x0046CA41]
+	(No symbol) [0x00360A17]
+	(No symbol) [0x003A69EC]
+	(No symbol) [0x003A4E82]
+	(No symbol) [0x003A2CEB]
+	(No symbol) [0x003A22E7]
+	(No symbol) [0x00397389]
+	(No symbol) [0x003C0D9C]
+	(No symbol) [0x00396E25]
+	(No symbol) [0x003C1034]
+	(No symbol) [0x003D9B9C]
+	(No symbol) [0x003C0B36]
+	(No symbol) [0x0039570D]
+	(No symbol) [0x003962CD]
+	GetHandleVerifier [0x007965A3+2908435]
+	GetHandleVerifier [0x007D3BBB+3159851]
+	GetHandleVerifier [0x005750CB+674875]
+	GetHandleVerifier [0x0057B28C+699900]
+	(No symbol) [0x00476244]
+	(No symbol) [0x00472298]
+	(No symbol) [0x0047242C]
+	(No symbol) [0x00464BB0]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x77D1BE3B+107]
+	RtlClearBits [0x77D1BDBF+191]
+
+2024-05-22 13:50:48,639 - NewsExtractor - ERROR - Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x004DC113+48259]
+	(No symbol) [0x0046CA41]
+	(No symbol) [0x00360A17]
+	(No symbol) [0x003A69EC]
+	(No symbol) [0x003A4E82]
+	(No symbol) [0x003A2CEB]
+	(No symbol) [0x003A22E7]
+	(No symbol) [0x00397389]
+	(No symbol) [0x003C0D9C]
+	(No symbol) [0x00396E25]
+	(No symbol) [0x003C1034]
+	(No symbol) [0x003D9B9C]
+	(No symbol) [0x003C0B36]
+	(No symbol) [0x0039570D]
+	(No symbol) [0x003962CD]
+	GetHandleVerifier [0x007965A3+2908435]
+	GetHandleVerifier [0x007D3BBB+3159851]
+	GetHandleVerifier [0x005750CB+674875]
+	GetHandleVerifier [0x0057B28C+699900]
+	(No symbol) [0x00476244]
+	(No symbol) [0x00472298]
+	(No symbol) [0x0047242C]
+	(No symbol) [0x00464BB0]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x77D1BE3B+107]
+	RtlClearBits [0x77D1BDBF+191]
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 48, in click_on_search_button
+    search_button.click()
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x004DC113+48259]
+	(No symbol) [0x0046CA41]
+	(No symbol) [0x00360A17]
+	(No symbol) [0x003A69EC]
+	(No symbol) [0x003A4E82]
+	(No symbol) [0x003A2CEB]
+	(No symbol) [0x003A22E7]
+	(No symbol) [0x00397389]
+	(No symbol) [0x003C0D9C]
+	(No symbol) [0x00396E25]
+	(No symbol) [0x003C1034]
+	(No symbol) [0x003D9B9C]
+	(No symbol) [0x003C0B36]
+	(No symbol) [0x0039570D]
+	(No symbol) [0x003962CD]
+	GetHandleVerifier [0x007965A3+2908435]
+	GetHandleVerifier [0x007D3BBB+3159851]
+	GetHandleVerifier [0x005750CB+674875]
+	GetHandleVerifier [0x0057B28C+699900]
+	(No symbol) [0x00476244]
+	(No symbol) [0x00472298]
+	(No symbol) [0x0047242C]
+	(No symbol) [0x00464BB0]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x77D1BE3B+107]
+	RtlClearBits [0x77D1BDBF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 54, in click_on_search_button
+    self.browser.click_button_when_visible(search_button)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\RPA\Browser\Selenium.py", line 1210, in click_button_when_visible
+    self.click_button(locator, modifier)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\keywords\element.py", line 565, in click_button
+    element.click()
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=124.0.6367.208)
+Stacktrace:
+	GetHandleVerifier [0x004DC113+48259]
+	(No symbol) [0x0046CA41]
+	(No symbol) [0x00360A17]
+	(No symbol) [0x003A69EC]
+	(No symbol) [0x003A4E82]
+	(No symbol) [0x003A2CEB]
+	(No symbol) [0x003A22E7]
+	(No symbol) [0x00397389]
+	(No symbol) [0x003C0D9C]
+	(No symbol) [0x00396E25]
+	(No symbol) [0x003C1034]
+	(No symbol) [0x003D9B9C]
+	(No symbol) [0x003C0B36]
+	(No symbol) [0x0039570D]
+	(No symbol) [0x003962CD]
+	GetHandleVerifier [0x007965A3+2908435]
+	GetHandleVerifier [0x007D3BBB+3159851]
+	GetHandleVerifier [0x005750CB+674875]
+	GetHandleVerifier [0x0057B28C+699900]
+	(No symbol) [0x00476244]
+	(No symbol) [0x00472298]
+	(No symbol) [0x0047242C]
+	(No symbol) [0x00464BB0]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x77D1BE3B+107]
+	RtlClearBits [0x77D1BDBF+191]
+
+2024-05-22 13:53:26,031 - NewsExtractor - INFO - Opened the news site
