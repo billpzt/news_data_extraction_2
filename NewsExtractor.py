@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class NewsExtractor:
-    def __init__(self, search_phrase,  months=None, news_category=None):
+    def __init__(self, search_phrase,  months=None, news_category=None, local=True):
         self.search_phrase = search_phrase
         self.months = months
         self.news_category = news_category
@@ -27,6 +27,7 @@ class NewsExtractor:
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
         self.logger.addHandler(handler)
+        self.local = local
 
     def open_site(self):
         """Open the news site"""
@@ -127,7 +128,10 @@ class NewsExtractor:
                     print("Não encontrou imagem!")
                 else:
                     picture_url = e_img.get_attribute("src")
-                    picture_filename = Utils.download_picture(picture_url)
+                    if self.local:
+                        picture_filename = Utils.LOCAL_download_picture(picture_url)
+                    else:
+                        picture_filename = Utils.download_picture(picture_url)
                     print(f"URL da imagem: {picture_url}")
                     print(f"Nome do arquivo: {picture_filename}")
 
@@ -172,5 +176,8 @@ class NewsExtractor:
         self.click_on_news_category()
         self.filter_newest()
         self.paging_for_extraction()
-        Utils.save_to_excel(self.results)
+        if self.local:
+            Utils.LOCAL_save_to_excel(self.results)
+        else:
+            Utils.save_to_excel(self.results)
         self.close_site()
