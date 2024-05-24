@@ -9,17 +9,30 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
 class Utils:
-    def date_formatter(date):
-        try:
-            date = datetime.strptime(date, '%B %d, %Y')
-        except:
-            try:
-                date = datetime.strptime(date, '%b. %d, %Y')
-            except:
-                date = datetime.today() # Ex: 24/04/2024
+    # def date_formatter(date):
+    #     try:
+    #         date = datetime.strptime(date, '%B %d, %Y')
+    #     except:
+    #         try:
+    #             date = datetime.strptime(date, '%b. %d, %Y')
+    #         except:
+    #             date = datetime.today() # Ex: 24/04/2024
 
-        # Ensure only the date part is stored
+    #     # Ensure only the date part is stored
+    #     return date.date()
+
+    def date_formatter(date_str):
+        try:
+            # Parse the input date string with the current year appended
+            complete_date_str = f"{date_str} {datetime.now().year}"
+            date = datetime.strptime(complete_date_str, '%B %d %Y')
+        except ValueError:
+            # Fallback to today's date if parsing fails
+            date = datetime.today()
+        
+        # Return only the date part
         return date.date()
+
     
     def date_checker(date_to_check, months):
         number_of_months = months

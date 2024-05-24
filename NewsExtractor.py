@@ -105,12 +105,18 @@ class NewsExtractor:
         
         for i, r in enumerate(articles):
             # Capture and convert date string to datetime object
+            raw_date = WebDriverWait(self.browser.driver, 20).until(
+                EC.presence_of_element_located((By.XPATH, loc.article_date_xpath))
+            )
             raw_date = r.find_element(By.XPATH, loc.article_date_xpath).text
-            date = Utils.date_formatter(date=raw_date)
+            date = Utils.date_formatter(date_str=raw_date)
             months = self.months
             valid_date = Utils.date_checker(date_to_check=date, months=months)
 
             if (valid_date):
+                title = WebDriverWait(self.browser.driver, 20).until(
+                    EC.presence_of_element_located((By.XPATH, loc.article_title_xpath))
+                )
                 title = r.find_element(By.XPATH, loc.article_title_xpath).text
 
                 try:

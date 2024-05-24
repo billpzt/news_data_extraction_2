@@ -14,7 +14,11 @@ class Locators():
     dropdown_xpath = "//select[contains(@name, 's')]"
     category_menu_xpath = '//div[@class="SearchFilter-heading"]'
 
-    articles_xpath = '//div[@class="PagePromo-content"]'
+    # spotlight_xpath = '/html/body/div[4]/bsp-search-results-module/form/div[2]/div/bsp-search-filters/div/main/div[2]'
+    articles_results_area_xpath = '//div[@class="SearchResultsModule-results"]'
+    individual_article_xpath = './/div[@class="PagePromo-content"]'
+    articles_xpath = '//div[@class="SearchResultsModule-results"]//div[@class="PagePromo-content"]'
+
     # article_title_xpath = '//div[@class="PageList-items"]//bsp-custom-headline//a/span[@class="PagePromoContentIcons-text"]'
     article_title_xpath = './/span[@class="PagePromoContentIcons-text"]'
     # article_description_xpath = '//div[contains(@class, "PagePromo-description")]/a/span[contains(@class, "PagePromoContentIcons-text")]'

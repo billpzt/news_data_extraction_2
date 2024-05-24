@@ -442,3 +442,47 @@ Stacktrace:
 2024-05-22 19:25:22,811 - NewsExtractor - INFO - Opened the news site
 2024-05-22 19:52:55,318 - NewsExtractor - INFO - Opened the news site
 2024-05-22 19:58:37,029 - NewsExtractor - INFO - Opened the news site
+2024-05-24 11:17:13,445 - NewsExtractor - INFO - Opened the news site
+2024-05-24 11:24:22,177 - NewsExtractor - INFO - Opened the news site
+2024-05-24 11:26:48,885 - NewsExtractor - INFO - Opened the news site
+2024-05-24 11:29:07,698 - NewsExtractor - INFO - Opened the news site
+2024-05-24 11:40:41,274 - NewsExtractor - INFO - Opened the news site
+2024-05-24 11:47:05,872 - NewsExtractor - INFO - Opened the news site
+2024-05-24 11:48:39,266 - NewsExtractor - INFO - Opened the news site
+2024-05-24 11:48:42,820 - NewsExtractor - WARNING - Option not available - Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=125.0.6422.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0116B793+45827]
+	(No symbol) [0x010FDB74]
+	(No symbol) [0x00FF150F]
+	(No symbol) [0x00FF660F]
+	(No symbol) [0x00FF8298]
+	(No symbol) [0x00FF8310]
+	(No symbol) [0x01031ED6]
+	(No symbol) [0x0103216B]
+	(No symbol) [0x01028471]
+	(No symbol) [0x01052E44]
+	(No symbol) [0x01028075]
+	(No symbol) [0x01053094]
+	(No symbol) [0x0106C034]
+	(No symbol) [0x01052B96]
+	(No symbol) [0x01026998]
+	(No symbol) [0x0102751D]
+	GetHandleVerifier [0x014243C3+2899763]
+	GetHandleVerifier [0x014777ED+3240797]
+	GetHandleVerifier [0x011F1264+593364]
+	GetHandleVerifier [0x011F818C+621820]
+	(No symbol) [0x01106F54]
+	(No symbol) [0x01103658]
+	(No symbol) [0x011037F7]
+	(No symbol) [0x010F58AE]
+	BaseThreadInitThunk [0x75B87BA9+25]
+	RtlInitializeExceptionChain [0x76F7BE3B+107]
+	RtlClearBits [0x76F7BDBF+191]
+
+2024-05-24 11:58:42,459 - NewsExtractor - INFO - Opened the news site
+2024-05-24 12:00:55,076 - NewsExtractor - INFO - Opened the news site
+2024-05-24 12:04:26,405 - NewsExtractor - INFO - Opened the news site
+2024-05-24 12:07:40,958 - NewsExtractor - INFO - Opened the news site
+2024-05-24 12:10:37,615 - NewsExtractor - INFO - Opened the news site
+2024-05-24 12:13:14,552 - NewsExtractor - INFO - Opened the news site
