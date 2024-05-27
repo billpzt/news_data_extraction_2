@@ -23,6 +23,6 @@ class Locators():
     article_title_xpath = './/span[@class="PagePromoContentIcons-text"]'
     # article_description_xpath = '//div[contains(@class, "PagePromo-description")]/a/span[contains(@class, "PagePromoContentIcons-text")]'
     article_description_xpath = './/span[contains(@class, "PagePromoContentIcons-text")]'
-    article_date_xpath = './/span[contains(@class, "Timestamp-template")]'
+    article_date_xpath = '//span[contains(@class, "Timestamp-template")]'
     article_image_xpath = './/img[@class="Image"]'
     next_results_xpath = '//div[@class="Pagination-nextPage"]'

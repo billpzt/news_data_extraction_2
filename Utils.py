@@ -8,19 +8,13 @@ from robocorp import storage
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
+from RPA.Browser.Selenium import By, Selenium
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+from Locators import Locators as loc
+
 class Utils:
-    # def date_formatter(date):
-    #     try:
-    #         date = datetime.strptime(date, '%B %d, %Y')
-    #     except:
-    #         try:
-    #             date = datetime.strptime(date, '%b. %d, %Y')
-    #         except:
-    #             date = datetime.today() # Ex: 24/04/2024
-
-    #     # Ensure only the date part is stored
-    #     return date.date()
-
     def date_formatter(date_str):
         try:
             # Parse the input date string with the current year appended
@@ -33,7 +27,6 @@ class Utils:
         # Return only the date part
         return date.date()
 
-    
     def date_checker(date_to_check, months):
         number_of_months = months
         if (months == 0):
@@ -109,6 +102,51 @@ class Utils:
             print(f"Error downloading picture: {e}")
 
         return None
+    
+    def picture_extraction(local, article):
+        try:
+            e_img = article.find_element(By.XPATH, loc.article_image_xpath)
+            print(f"Encontrou imagem: {e_img}")
+        except:
+            picture_url = ''
+            picture_filename = ''
+            print("Image not found")
+        else:
+            picture_url = e_img.get_attribute("src")
+            if local:
+                picture_filename = Utils.LOCAL_download_picture(picture_url)
+            else:
+                picture_filename = Utils.download_picture(picture_url)
+            print(f"URL da imagem: {picture_url}")
+            print(f"Nome do arquivo: {picture_filename}")
+        return picture_filename
+    
+    def date_extraction_and_validation(browser, months, article):
+        # WebDriverWait(browser, 20).until(
+        #         EC.presence_of_element_located((By.XPATH, loc.article_date_xpath))
+        #     )
+        raw_date = article.find_element(By.XPATH, loc.article_date_xpath).text
+        date = Utils.date_formatter(date_str=raw_date)
+        months = months
+        valid_date = Utils.date_checker(date_to_check=date, months=months)
+        return date, valid_date
+    
+    def title_extraction(browser, article):
+        try:
+            title = WebDriverWait(browser, 20).until(
+                EC.presence_of_element_located((By.XPATH, loc.article_title_xpath))
+            )
+            title = article.find_element(By.XPATH, loc.article_title_xpath).text
+        except:
+            title = 'Title not found'
+        return title
+    
+    def description_extraction(article):
+        try:
+            description = article.find_element(By.XPATH, loc.article_description_xpath).text
+        except:
+            description = 'Description not found'
+        return description
 
     def LOCAL_save_to_excel(results):
         wb = openpyxl.Workbook()
