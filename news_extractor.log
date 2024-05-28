@@ -486,3 +486,60 @@ Stacktrace:
 2024-05-24 12:07:40,958 - NewsExtractor - INFO - Opened the news site
 2024-05-24 12:10:37,615 - NewsExtractor - INFO - Opened the news site
 2024-05-24 12:13:14,552 - NewsExtractor - INFO - Opened the news site
+2024-05-24 19:38:35,638 - NewsExtractor - INFO - Opened the news site
+2024-05-25 00:47:46,912 - NewsExtractor - INFO - Opened the news site
+2024-05-25 17:27:53,012 - NewsExtractor - INFO - Opened the news site
+2024-05-25 18:03:52,094 - NewsExtractor - INFO - Opened the news site
+2024-05-25 18:10:02,685 - NewsExtractor - INFO - Opened the news site
+2024-05-25 18:15:48,265 - NewsExtractor - INFO - Opened the news site
+2024-05-25 18:28:48,897 - NewsExtractor - INFO - Opened the news site
+2024-05-25 18:41:52,809 - NewsExtractor - INFO - Opened the news site
+2024-05-25 18:51:35,149 - NewsExtractor - INFO - Opened the news site
+2024-05-25 19:25:44,330 - NewsExtractor - INFO - Opened the news site
+2024-05-25 19:32:53,636 - NewsExtractor - INFO - Opened the news site
+2024-05-25 20:01:55,629 - NewsExtractor - INFO - Opened the news site
+2024-05-25 20:13:18,578 - NewsExtractor - INFO - Opened the news site
+2024-05-26 17:44:31,143 - NewsExtractor - INFO - Opened the news site
+2024-05-26 17:52:49,196 - NewsExtractor - INFO - Opened the news site
+2024-05-26 17:56:45,338 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:01:42,029 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:15:43,670 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:21:41,491 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:23:02,098 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:29:23,856 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:31:35,910 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:37:43,269 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:39:20,478 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:39:22,987 - NewsExtractor - WARNING - Option not available - Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=125.0.6422.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x0067B793+45827]
+	(No symbol) [0x0060DB74]
+	(No symbol) [0x0050150F]
+	(No symbol) [0x0050660F]
+	(No symbol) [0x00508298]
+	(No symbol) [0x00508310]
+	(No symbol) [0x0053D6F0]
+	(No symbol) [0x00562DFC]
+	(No symbol) [0x00538075]
+	(No symbol) [0x00563094]
+	(No symbol) [0x0057C034]
+	(No symbol) [0x00562B96]
+	(No symbol) [0x00536998]
+	(No symbol) [0x0053751D]
+	GetHandleVerifier [0x009343C3+2899763]
+	GetHandleVerifier [0x009877ED+3240797]
+	GetHandleVerifier [0x00701264+593364]
+	GetHandleVerifier [0x0070818C+621820]
+	(No symbol) [0x00616F54]
+	(No symbol) [0x00613658]
+	(No symbol) [0x006137F7]
+	(No symbol) [0x006058AE]
+	BaseThreadInitThunk [0x75B87BA9+25]
+	RtlInitializeExceptionChain [0x76F7BE3B+107]
+	RtlClearBits [0x76F7BDBF+191]
+
+2024-05-26 18:43:28,987 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:49:34,637 - NewsExtractor - INFO - Opened the news site
+2024-05-26 18:52:09,654 - NewsExtractor - INFO - Opened the news site
+2024-05-26 19:06:24,898 - NewsExtractor - INFO - Opened the news site

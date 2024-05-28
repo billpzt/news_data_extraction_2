@@ -1,0 +1,34 @@
+<div class="PageList-items-item">
+                            <div class="PagePromo" data-gtm-region="The Latest | Israel must stop Rafah offensive and open border for aid, UN court rules" data-gtm-topic="No Value" data-origintemplate="PagePromo" data-mobile-alt-layout="true"> 
+    <div class="PagePromo-media"><a class="Link" aria-label="The Latest | Israel must stop Rafah offensive and open border for aid, UN court rules" href="https://apnews.com/article/israel-iran-hamas-latest-05-24-2024-a5a702f8333e517022a04e555d050351"><picture data-crop="imgEn-small-3x2">
+        <source media="(min-width: 768px)" type="image/webp" width="350" height="233" srcset="https://dims.apnews.com/dims4/default/822b150/2147483647/strip/true/crop/6803x4529+0+4/resize/350x233!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 1x,https://dims.apnews.com/dims4/default/ef5b149/2147483647/strip/true/crop/6803x4529+0+4/resize/700x466!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 2x" loading="lazy">
+        <source media="(min-width: 768px)" width="350" height="233" srcset="https://dims.apnews.com/dims4/default/ca7753a/2147483647/strip/true/crop/6803x4529+0+4/resize/350x233!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 1x,https://dims.apnews.com/dims4/default/0fb6cf7/2147483647/strip/true/crop/6803x4529+0+4/resize/700x466!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 2x" loading="lazy">
+        <source type="image/webp" width="599" height="399" srcset="https://dims.apnews.com/dims4/default/6e86b7f/2147483647/strip/true/crop/6803x4532+0+2/resize/599x399!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 1x,https://dims.apnews.com/dims4/default/8af0c99/2147483647/strip/true/crop/6803x4532+0+2/resize/1198x798!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 2x" loading="lazy">
+        <source width="599" height="399" srcset="https://dims.apnews.com/dims4/default/73f87a8/2147483647/strip/true/crop/6803x4532+0+2/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 1x,https://dims.apnews.com/dims4/default/6eb46a1/2147483647/strip/true/crop/6803x4532+0+2/resize/1198x798!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 2x" loading="lazy">
+<img class="Image" alt="An Israeli female soldier sits atop a tank in a staging area near the Gaza border in southern Israel, Friday, May 24, 2024. (AP Photo/Tsafrir Abayov)" srcset="https://dims.apnews.com/dims4/default/73f87a8/2147483647/strip/true/crop/6803x4532+0+2/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 1x,https://dims.apnews.com/dims4/default/6eb46a1/2147483647/strip/true/crop/6803x4532+0+2/resize/1198x798!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d 2x" width="599" height="399" src="https://dims.apnews.com/dims4/default/73f87a8/2147483647/strip/true/crop/6803x4532+0+2/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fd2%2F04067827c22fdc2327eb394d6af0%2F161e3fecf2e44e83baf6466593485c7d" loading="lazy">
+</picture>
+</a></div>
+    <div class="PagePromo-content">
+        <bsp-custom-headline custom-headline="div">
+            <div class="PagePromo-title">
+                <a class="Link " href="https://apnews.com/article/israel-iran-hamas-latest-05-24-2024-a5a702f8333e517022a04e555d050351"><span class="PagePromoContentIcons-text">The Latest | Israel must stop Rafah offensive and open border for aid, UN court rules</span></a>
+            </div>
+        </bsp-custom-headline>
+    <div class="PagePromo-description">
+         <a class="Link " href="https://apnews.com/article/israel-iran-hamas-latest-05-24-2024-a5a702f8333e517022a04e555d050351"><span class="PagePromoContentIcons-text">The top United Nations court has ordered Israel to halt its military offensive in the southern Gaza city of Rafah.</span></a>
+    </div>
+        <div class="PagePromo-byline">
+            <div class="PagePromo-date">
+                <bsp-timestamp data-timestamp="1716585074000" data-recent-thresholdinhours="1">
+                        <template data-date-tpl="">Updated [hour]:[minute] [AMPM] [timezone], [monthFull] [day], [year]</template>
+                        <template data-date-tpl-recent=""><span class="Timestamp-template">[deltaHours] hours ago</span></template>
+                        <template data-date-tpl-yesterday=""><span class="Timestamp-template">Yesterday</span></template>
+                        <template data-date-tpl-sameyear=""><span class="Timestamp-template">[monthFull] [day]</span></template>
+                        <template data-date-tpl-date=""><span class="Timestamp-template">[monthFull] [day], [year]</span></template>
+                        <template data-date-tpl-minago=""><span class="Timestamp-template-now">[deltaMinutes] mins ago</span></template>
+                        <template data-date-tpl-now=""><span class="Timestamp-template-now">Now</span></template>
+                    <span data-date=""><span class="Timestamp-template">Yesterday</span></span>
+                </bsp-timestamp>
+            </div>
+            </div>  
+    </div>

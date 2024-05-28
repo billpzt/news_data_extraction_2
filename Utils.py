@@ -5,6 +5,7 @@ import requests
 import openpyxl
 from robocorp import storage
 
+from dateutil.parser import parse
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
@@ -23,15 +24,13 @@ class Utils:
 
     def date_formatter(date_str):
         try:
-            # Parse the input date string with the current year appended
-            complete_date_str = f"{date_str} {datetime.now().year}"
-            date = datetime.strptime(complete_date_str, '%B %d %Y')
+        # Attempt to parse the input date string
+            parsed_date = parse(date_str)
+        # If successful, return the date part of the parsed date
+            return parsed_date.date()
         except ValueError:
-            # Fallback to today's date if parsing fails
-            date = datetime.today()
-        
-        # Return only the date part
-        return date.date()
+        # If parsing fails, return today's date
+            return datetime.today().date()
 
     
     def date_checker(date_to_check, months):
@@ -165,5 +164,3 @@ class Utils:
         asset_name = "results.xlsx"  # You can customize the asset name as needed
         storage.set_file(asset_name, excel_path)
         print(f"Excel file stored as asset: {asset_name}")
-
-

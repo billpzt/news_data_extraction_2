@@ -10,6 +10,8 @@ from robocorp.tasks import task
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import StaleElementReferenceException
 
 class NewsExtractor:
     def __init__(self, search_phrase,  months=None, news_category=None, local=True):
@@ -102,9 +104,28 @@ class NewsExtractor:
     def extract_articles_data(self):
         """Extract data from news articles"""
         articles = self.browser.get_webelements(loc.articles_xpath)
-        
+        # print(articles)
         for i, r in enumerate(articles):
+            print(i)
+            print(r)
+            print(r.find_element(By.XPATH, loc.article_title_xpath).text)
+            print(r.find_element(By.XPATH, loc.article_description_xpath).text)
+            print(r.find_element(By.XPATH, loc.article_date_xpath).text)
+            print()
+            # print(r.find_element(By.XPATH, loc.article_image_xpath))
             # Capture and convert date string to datetime object
+            # try:
+            #     raw_date = WebDriverWait(self.browser.driver, 20).until(
+            #         EC.presence_of_element_located((By.XPATH, loc.article_date_xpath))
+            #     )
+            #     raw_date = r.find_element(By.XPATH, loc.article_date_xpath).text
+            # # Interact with the element
+            # except StaleElementReferenceException:
+            #     # The element might have been removed or the page refreshed
+            #     # Try to find the element again
+            #     raw_date = r.find_element(By.XPATH, loc.article_date_xpath).text
+            #     # Now you can interact with the element
+
             raw_date = WebDriverWait(self.browser.driver, 20).until(
                 EC.presence_of_element_located((By.XPATH, loc.article_date_xpath))
             )
@@ -114,15 +135,21 @@ class NewsExtractor:
             valid_date = Utils.date_checker(date_to_check=date, months=months)
 
             if (valid_date):
-                title = WebDriverWait(self.browser.driver, 20).until(
-                    EC.presence_of_element_located((By.XPATH, loc.article_title_xpath))
-                )
-                title = r.find_element(By.XPATH, loc.article_title_xpath).text
+                try:
+                    title = WebDriverWait(self.browser.driver, 20).until(
+                        EC.presence_of_element_located((By.XPATH, loc.article_title_xpath))
+                    )
+                    title = r.find_element(By.XPATH, loc.article_title_xpath).text
+                except:
+                    title = 'title not found'
 
                 try:
+                    description = WebDriverWait(self.browser.driver, 20).until(
+                        EC.presence_of_element_located((By.XPATH, loc.article_description_xpath))
+                    )
                     description = r.find_element(By.XPATH, loc.article_description_xpath).text
                 except:
-                    description = ''
+                    description = 'description not found'
 
                 # Download picture if available and extract the filename
                 try:
@@ -163,7 +190,8 @@ class NewsExtractor:
                 break
 
         return valid_date
-    
+            
+
     def paging_for_extraction(self, goto_next_page=True):
         while (goto_next_page):
             goto_next_page = self.extract_articles_data()

@@ -15,14 +15,26 @@ class Locators():
     category_menu_xpath = '//div[@class="SearchFilter-heading"]'
 
     # spotlight_xpath = '/html/body/div[4]/bsp-search-results-module/form/div[2]/div/bsp-search-filters/div/main/div[2]'
-    articles_results_area_xpath = '//div[@class="SearchResultsModule-results"]'
     individual_article_xpath = './/div[@class="PagePromo-content"]'
-    articles_xpath = '//div[@class="SearchResultsModule-results"]//div[@class="PagePromo-content"]'
+    articles_xpath = '//div[@class="SearchResultsModule-results"]//div[@class="PageList-items-item"]'
+
+    article_title_xpath = './/div[@class="PagePromo-title"]/a/span[@class="PagePromoContentIcons-text"]'
+    article_description_xpath = './/div[@class="PagePromo-description"]/a/span[@class="PagePromoContentIcons-text"]'
+    article_image_xpath = './/div[@class="PagePromo-media"]/a/picture/img[@class="Image"]/@src'
+    article_date_xpath = './/span[contains(@class, "Timestamp-template")]'
 
     # article_title_xpath = '//div[@class="PageList-items"]//bsp-custom-headline//a/span[@class="PagePromoContentIcons-text"]'
-    article_title_xpath = './/span[@class="PagePromoContentIcons-text"]'
+    # article_title_xpath = './/span[@class="PagePromoContentIcons-text"]'
+    # article_title_xpath = '//div[@class="PagePromo-title"]/a/span[@class="PagePromoContentIcons-text"]'
+
     # article_description_xpath = '//div[contains(@class, "PagePromo-description")]/a/span[contains(@class, "PagePromoContentIcons-text")]'
-    article_description_xpath = './/span[contains(@class, "PagePromoContentIcons-text")]'
-    article_date_xpath = './/span[contains(@class, "Timestamp-template")]'
-    article_image_xpath = './/img[@class="Image"]'
+    # article_description_xpath = './/span[contains(@class, "PagePromoContentIcons-text")]'
+    # article_description_xpath = '//div[@class="PagePromo-description"]/a/span[@class="PagePromoContentIcons-text"]'
+
+    # article_date_xpath = './/span[contains(@class, "Timestamp-template")]'
+    # article_date_xpath = './/span[@class="Timestamp-template"]'
+    # article_date_xpath = '//div[3]/bsp-list-loadmore/div//span[contains(@class, "Timestamp-template")]'
+
+    # article_image_xpath = './/img[@class="Image"]'
+    # article_image_xpath = '//div[@class="PagePromo-media"]/a/picture/img[@class="Image"]'
     next_results_xpath = '//div[@class="Pagination-nextPage"]'
