@@ -28,13 +28,7 @@ class Locators():
     # article_title_xpath = '//div[@class="PagePromo-title"]/a/span[@class="PagePromoContentIcons-text"]'
 
     # article_description_xpath = '//div[contains(@class, "PagePromo-description")]/a/span[contains(@class, "PagePromoContentIcons-text")]'
-    # article_description_xpath = './/span[contains(@class, "PagePromoContentIcons-text")]'
-    # article_description_xpath = '//div[@class="PagePromo-description"]/a/span[@class="PagePromoContentIcons-text"]'
-
-    # article_date_xpath = './/span[contains(@class, "Timestamp-template")]'
-    # article_date_xpath = './/span[@class="Timestamp-template"]'
-    # article_date_xpath = '//div[3]/bsp-list-loadmore/div//span[contains(@class, "Timestamp-template")]'
-
-    # article_image_xpath = './/img[@class="Image"]'
-    # article_image_xpath = '//div[@class="PagePromo-media"]/a/picture/img[@class="Image"]'
+    article_description_xpath = './/span[contains(@class, "PagePromoContentIcons-text")]'
+    article_date_xpath = '//span[contains(@class, "Timestamp-template")]'
+    article_image_xpath = './/img[@class="Image"]'
     next_results_xpath = '//div[@class="Pagination-nextPage"]'

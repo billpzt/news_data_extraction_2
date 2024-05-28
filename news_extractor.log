@@ -486,60 +486,444 @@ Stacktrace:
 2024-05-24 12:07:40,958 - NewsExtractor - INFO - Opened the news site
 2024-05-24 12:10:37,615 - NewsExtractor - INFO - Opened the news site
 2024-05-24 12:13:14,552 - NewsExtractor - INFO - Opened the news site
-2024-05-24 19:38:35,638 - NewsExtractor - INFO - Opened the news site
-2024-05-25 00:47:46,912 - NewsExtractor - INFO - Opened the news site
-2024-05-25 17:27:53,012 - NewsExtractor - INFO - Opened the news site
-2024-05-25 18:03:52,094 - NewsExtractor - INFO - Opened the news site
-2024-05-25 18:10:02,685 - NewsExtractor - INFO - Opened the news site
-2024-05-25 18:15:48,265 - NewsExtractor - INFO - Opened the news site
-2024-05-25 18:28:48,897 - NewsExtractor - INFO - Opened the news site
-2024-05-25 18:41:52,809 - NewsExtractor - INFO - Opened the news site
-2024-05-25 18:51:35,149 - NewsExtractor - INFO - Opened the news site
-2024-05-25 19:25:44,330 - NewsExtractor - INFO - Opened the news site
-2024-05-25 19:32:53,636 - NewsExtractor - INFO - Opened the news site
-2024-05-25 20:01:55,629 - NewsExtractor - INFO - Opened the news site
-2024-05-25 20:13:18,578 - NewsExtractor - INFO - Opened the news site
-2024-05-26 17:44:31,143 - NewsExtractor - INFO - Opened the news site
-2024-05-26 17:52:49,196 - NewsExtractor - INFO - Opened the news site
-2024-05-26 17:56:45,338 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:01:42,029 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:15:43,670 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:21:41,491 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:23:02,098 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:29:23,856 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:31:35,910 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:37:43,269 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:39:20,478 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:39:22,987 - NewsExtractor - WARNING - Option not available - Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=125.0.6422.77); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Stacktrace:
-	GetHandleVerifier [0x0067B793+45827]
-	(No symbol) [0x0060DB74]
-	(No symbol) [0x0050150F]
-	(No symbol) [0x0050660F]
-	(No symbol) [0x00508298]
-	(No symbol) [0x00508310]
-	(No symbol) [0x0053D6F0]
-	(No symbol) [0x00562DFC]
-	(No symbol) [0x00538075]
-	(No symbol) [0x00563094]
-	(No symbol) [0x0057C034]
-	(No symbol) [0x00562B96]
-	(No symbol) [0x00536998]
-	(No symbol) [0x0053751D]
-	GetHandleVerifier [0x009343C3+2899763]
-	GetHandleVerifier [0x009877ED+3240797]
-	GetHandleVerifier [0x00701264+593364]
-	GetHandleVerifier [0x0070818C+621820]
-	(No symbol) [0x00616F54]
-	(No symbol) [0x00613658]
-	(No symbol) [0x006137F7]
-	(No symbol) [0x006058AE]
-	BaseThreadInitThunk [0x75B87BA9+25]
-	RtlInitializeExceptionChain [0x76F7BE3B+107]
-	RtlClearBits [0x76F7BDBF+191]
+2024-05-27 13:45:57,895 - NewsExtractor - INFO - Opened the news site
+2024-05-27 13:46:49,430 - NewsExtractor - ERROR - Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\__init__.py", line 610, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+2024-05-27 13:46:49,431 - NewsExtractor - ERROR - local variable 'search_button' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\__init__.py", line 610, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
 
-2024-05-26 18:43:28,987 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:49:34,637 - NewsExtractor - INFO - Opened the news site
-2024-05-26 18:52:09,654 - NewsExtractor - INFO - Opened the news site
-2024-05-26 19:06:24,898 - NewsExtractor - INFO - Opened the news site
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 55, in click_on_search_button
+    self.browser.click_button_when_visible(search_button)
+UnboundLocalError: local variable 'search_button' referenced before assignment
+2024-05-27 13:49:55,268 - NewsExtractor - INFO - Opened the news site
+2024-05-27 13:50:45,637 - NewsExtractor - ERROR - Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\__init__.py", line 610, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+2024-05-27 13:50:45,637 - NewsExtractor - ERROR - local variable 'search_button' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\__init__.py", line 610, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 55, in click_on_search_button
+    self.browser.click_button_when_visible(search_button)
+UnboundLocalError: local variable 'search_button' referenced before assignment
+2024-05-27 13:56:44,603 - NewsExtractor - INFO - Opened the news site
+2024-05-27 14:33:15,636 - NewsExtractor - INFO - Opened the news site
+2024-05-27 14:33:18,229 - NewsExtractor - ERROR - Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=125.0.6422.77)
+Stacktrace:
+	GetHandleVerifier [0x003CB793+45827]
+	(No symbol) [0x0035DB74]
+	(No symbol) [0x0025150F]
+	(No symbol) [0x00298052]
+	(No symbol) [0x002963D8]
+	(No symbol) [0x0029425B]
+	(No symbol) [0x00293823]
+	(No symbol) [0x002885EF]
+	(No symbol) [0x002B2DFC]
+	(No symbol) [0x00288075]
+	(No symbol) [0x002B3094]
+	(No symbol) [0x002CC034]
+	(No symbol) [0x002B2B96]
+	(No symbol) [0x00286998]
+	(No symbol) [0x0028751D]
+	GetHandleVerifier [0x006843C3+2899763]
+	GetHandleVerifier [0x006D77ED+3240797]
+	GetHandleVerifier [0x00451264+593364]
+	GetHandleVerifier [0x0045818C+621820]
+	(No symbol) [0x00366F54]
+	(No symbol) [0x00363658]
+	(No symbol) [0x003637F7]
+	(No symbol) [0x003558AE]
+	BaseThreadInitThunk [0x75437BA9+25]
+	RtlInitializeExceptionChain [0x777CBE3B+107]
+	RtlClearBits [0x777CBDBF+191]
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 49, in click_on_search_button
+    search_button.click()
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=125.0.6422.77)
+Stacktrace:
+	GetHandleVerifier [0x003CB793+45827]
+	(No symbol) [0x0035DB74]
+	(No symbol) [0x0025150F]
+	(No symbol) [0x00298052]
+	(No symbol) [0x002963D8]
+	(No symbol) [0x0029425B]
+	(No symbol) [0x00293823]
+	(No symbol) [0x002885EF]
+	(No symbol) [0x002B2DFC]
+	(No symbol) [0x00288075]
+	(No symbol) [0x002B3094]
+	(No symbol) [0x002CC034]
+	(No symbol) [0x002B2B96]
+	(No symbol) [0x00286998]
+	(No symbol) [0x0028751D]
+	GetHandleVerifier [0x006843C3+2899763]
+	GetHandleVerifier [0x006D77ED+3240797]
+	GetHandleVerifier [0x00451264+593364]
+	GetHandleVerifier [0x0045818C+621820]
+	(No symbol) [0x00366F54]
+	(No symbol) [0x00363658]
+	(No symbol) [0x003637F7]
+	(No symbol) [0x003558AE]
+	BaseThreadInitThunk [0x75437BA9+25]
+	RtlInitializeExceptionChain [0x777CBE3B+107]
+	RtlClearBits [0x777CBDBF+191]
+
+2024-05-27 14:33:19,374 - NewsExtractor - ERROR - Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=125.0.6422.77)
+Stacktrace:
+	GetHandleVerifier [0x003CB793+45827]
+	(No symbol) [0x0035DB74]
+	(No symbol) [0x0025150F]
+	(No symbol) [0x00298052]
+	(No symbol) [0x002963D8]
+	(No symbol) [0x0029425B]
+	(No symbol) [0x00293823]
+	(No symbol) [0x002885EF]
+	(No symbol) [0x002B2DFC]
+	(No symbol) [0x00288075]
+	(No symbol) [0x002B3094]
+	(No symbol) [0x002CC034]
+	(No symbol) [0x002B2B96]
+	(No symbol) [0x00286998]
+	(No symbol) [0x0028751D]
+	GetHandleVerifier [0x006843C3+2899763]
+	GetHandleVerifier [0x006D77ED+3240797]
+	GetHandleVerifier [0x00451264+593364]
+	GetHandleVerifier [0x0045818C+621820]
+	(No symbol) [0x00366F54]
+	(No symbol) [0x00363658]
+	(No symbol) [0x003637F7]
+	(No symbol) [0x003558AE]
+	BaseThreadInitThunk [0x75437BA9+25]
+	RtlInitializeExceptionChain [0x777CBE3B+107]
+	RtlClearBits [0x777CBDBF+191]
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 49, in click_on_search_button
+    search_button.click()
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=125.0.6422.77)
+Stacktrace:
+	GetHandleVerifier [0x003CB793+45827]
+	(No symbol) [0x0035DB74]
+	(No symbol) [0x0025150F]
+	(No symbol) [0x00298052]
+	(No symbol) [0x002963D8]
+	(No symbol) [0x0029425B]
+	(No symbol) [0x00293823]
+	(No symbol) [0x002885EF]
+	(No symbol) [0x002B2DFC]
+	(No symbol) [0x00288075]
+	(No symbol) [0x002B3094]
+	(No symbol) [0x002CC034]
+	(No symbol) [0x002B2B96]
+	(No symbol) [0x00286998]
+	(No symbol) [0x0028751D]
+	GetHandleVerifier [0x006843C3+2899763]
+	GetHandleVerifier [0x006D77ED+3240797]
+	GetHandleVerifier [0x00451264+593364]
+	GetHandleVerifier [0x0045818C+621820]
+	(No symbol) [0x00366F54]
+	(No symbol) [0x00363658]
+	(No symbol) [0x003637F7]
+	(No symbol) [0x003558AE]
+	BaseThreadInitThunk [0x75437BA9+25]
+	RtlInitializeExceptionChain [0x777CBE3B+107]
+	RtlClearBits [0x777CBDBF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 55, in click_on_search_button
+    self.browser.click_button_when_visible(search_button)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\RPA\Browser\Selenium.py", line 1210, in click_button_when_visible
+    self.click_button(locator, modifier)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\keywords\element.py", line 565, in click_button
+    element.click()
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 93, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webelement.py", line 394, in _execute
+    return self._parent.execute(command, params)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="SearchOverlay-search-button">...</button> is not clickable at point (1614, 298). Other element would receive the click: <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: block; z-index: 2147483645;">...</div>
+  (Session info: chrome=125.0.6422.77)
+Stacktrace:
+	GetHandleVerifier [0x003CB793+45827]
+	(No symbol) [0x0035DB74]
+	(No symbol) [0x0025150F]
+	(No symbol) [0x00298052]
+	(No symbol) [0x002963D8]
+	(No symbol) [0x0029425B]
+	(No symbol) [0x00293823]
+	(No symbol) [0x002885EF]
+	(No symbol) [0x002B2DFC]
+	(No symbol) [0x00288075]
+	(No symbol) [0x002B3094]
+	(No symbol) [0x002CC034]
+	(No symbol) [0x002B2B96]
+	(No symbol) [0x00286998]
+	(No symbol) [0x0028751D]
+	GetHandleVerifier [0x006843C3+2899763]
+	GetHandleVerifier [0x006D77ED+3240797]
+	GetHandleVerifier [0x00451264+593364]
+	GetHandleVerifier [0x0045818C+621820]
+	(No symbol) [0x00366F54]
+	(No symbol) [0x00363658]
+	(No symbol) [0x003637F7]
+	(No symbol) [0x003558AE]
+	BaseThreadInitThunk [0x75437BA9+25]
+	RtlInitializeExceptionChain [0x777CBE3B+107]
+	RtlClearBits [0x777CBDBF+191]
+
+2024-05-27 14:53:14,329 - NewsExtractor - INFO - Opened the news site
+2024-05-27 14:53:15,578 - NewsExtractor - ERROR - Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=125.0.6422.77)
+Stacktrace:
+	GetHandleVerifier [0x003CB793+45827]
+	(No symbol) [0x0035DB74]
+	(No symbol) [0x0025150F]
+	(No symbol) [0x0023C238]
+	(No symbol) [0x0023C159]
+	(No symbol) [0x00253740]
+	(No symbol) [0x002CB906]
+	(No symbol) [0x002B2B96]
+	(No symbol) [0x00286998]
+	(No symbol) [0x0028751D]
+	GetHandleVerifier [0x006843C3+2899763]
+	GetHandleVerifier [0x006D77ED+3240797]
+	GetHandleVerifier [0x00451264+593364]
+	GetHandleVerifier [0x0045818C+621820]
+	(No symbol) [0x00366F54]
+	(No symbol) [0x00363658]
+	(No symbol) [0x003637F7]
+	(No symbol) [0x003558AE]
+	BaseThreadInitThunk [0x75437BA9+25]
+	RtlInitializeExceptionChain [0x777CBE3B+107]
+	RtlClearBits [0x777CBDBF+191]
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\__init__.py", line 610, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 123, in _find
+    elements = strategy(criteria, tag, constraints, parent=parent or self.driver)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 181, in _find_by_xpath
+    parent.find_elements(By.XPATH, criteria), tag, constraints
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 771, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {"using": by, "value": value})["value"] or []
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=125.0.6422.77)
+Stacktrace:
+	GetHandleVerifier [0x003CB793+45827]
+	(No symbol) [0x0035DB74]
+	(No symbol) [0x0025150F]
+	(No symbol) [0x0023C238]
+	(No symbol) [0x0023C159]
+	(No symbol) [0x00253740]
+	(No symbol) [0x002CB906]
+	(No symbol) [0x002B2B96]
+	(No symbol) [0x00286998]
+	(No symbol) [0x0028751D]
+	GetHandleVerifier [0x006843C3+2899763]
+	GetHandleVerifier [0x006D77ED+3240797]
+	GetHandleVerifier [0x00451264+593364]
+	GetHandleVerifier [0x0045818C+621820]
+	(No symbol) [0x00366F54]
+	(No symbol) [0x00363658]
+	(No symbol) [0x003637F7]
+	(No symbol) [0x003558AE]
+	BaseThreadInitThunk [0x75437BA9+25]
+	RtlInitializeExceptionChain [0x777CBE3B+107]
+	RtlClearBits [0x777CBDBF+191]
+
+2024-05-27 14:53:15,579 - NewsExtractor - ERROR - local variable 'search_button' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\__init__.py", line 610, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 123, in _find
+    elements = strategy(criteria, tag, constraints, parent=parent or self.driver)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 181, in _find_by_xpath
+    parent.find_elements(By.XPATH, criteria), tag, constraints
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 771, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {"using": by, "value": value})["value"] or []
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_1c0bc041\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=125.0.6422.77)
+Stacktrace:
+	GetHandleVerifier [0x003CB793+45827]
+	(No symbol) [0x0035DB74]
+	(No symbol) [0x0025150F]
+	(No symbol) [0x0023C238]
+	(No symbol) [0x0023C159]
+	(No symbol) [0x00253740]
+	(No symbol) [0x002CB906]
+	(No symbol) [0x002B2B96]
+	(No symbol) [0x00286998]
+	(No symbol) [0x0028751D]
+	GetHandleVerifier [0x006843C3+2899763]
+	GetHandleVerifier [0x006D77ED+3240797]
+	GetHandleVerifier [0x00451264+593364]
+	GetHandleVerifier [0x0045818C+621820]
+	(No symbol) [0x00366F54]
+	(No symbol) [0x00363658]
+	(No symbol) [0x003637F7]
+	(No symbol) [0x003558AE]
+	BaseThreadInitThunk [0x75437BA9+25]
+	RtlInitializeExceptionChain [0x777CBE3B+107]
+	RtlClearBits [0x777CBDBF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 55, in click_on_search_button
+    self.browser.click_button_when_visible(search_button)
+UnboundLocalError: local variable 'search_button' referenced before assignment
+2024-05-27 15:45:17,899 - NewsExtractor - INFO - Opened the news site
+2024-05-27 15:45:50,129 - NewsExtractor - ERROR - Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\__init__.py", line 721, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+2024-05-27 15:45:50,140 - NewsExtractor - ERROR - local variable 'search_button' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\__init__.py", line 721, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 55, in click_on_search_button
+    self.browser.click_button_when_visible(search_button)
+UnboundLocalError: local variable 'search_button' referenced before assignment
+2024-05-27 15:48:20,882 - NewsExtractor - INFO - Opened the news site
+2024-05-27 15:48:33,891 - NewsExtractor - ERROR - Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\__init__.py", line 721, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+2024-05-27 15:48:33,891 - NewsExtractor - ERROR - local variable 'search_button' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 46, in click_on_search_button
+    EC.element_to_be_clickable(self.browser.find_element(loc.search_button_xpath))
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\__init__.py", line 721, in find_element
+    return self._element_finder.find(locator, parent=parent)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
+    return self._find(locators[-1], tag, first_only, required, element)
+  File "C:\ProgramData\robocorp\ht\8e69d8c_b1f3c24_691db988\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
+    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
+SeleniumLibrary.errors.ElementNotFound: Element with locator '//button[@class="SearchOverlay-search-button"]' not found.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Bill Piazzetta\Documents\PIXELDU\news_data_extraction_2\NewsExtractor.py", line 55, in click_on_search_button
+    self.browser.click_button_when_visible(search_button)
+UnboundLocalError: local variable 'search_button' referenced before assignment
+2024-05-27 15:50:08,619 - NewsExtractor - INFO - Opened the news site
+2024-05-27 15:52:11,212 - NewsExtractor - INFO - Opened the news site
+2024-05-27 15:54:01,198 - NewsExtractor - INFO - Opened the news site
+2024-05-27 15:55:51,825 - NewsExtractor - INFO - Opened the news site
+2024-05-27 16:12:24,044 - NewsExtractor - INFO - Opened the news site
+2024-05-27 16:28:32,028 - NewsExtractor - INFO - Opened the news site
+2024-05-27 17:03:49,119 - NewsExtractor - INFO - Opened the news site
+2024-05-27 17:12:58,437 - NewsExtractor - INFO - Opened the news site
+2024-05-27 17:16:23,776 - NewsExtractor - INFO - Opened the news site
+2024-05-27 17:30:34,754 - NewsExtractor - INFO - Opened the news site
+2024-05-27 17:45:36,918 - NewsExtractor - INFO - Opened the news site

@@ -34,8 +34,6 @@ class NewsExtractor:
     def open_site(self):
         """Open the news site"""
         page_url = self.base_url
-        # self.browser.open_headless_chrome_browser(url=page_url)
-        # self.browser.open_chrome_browser(url=page_url, maximized=True)
         self.browser.open_available_browser(url=page_url, maximized=True)
         self.logger.info("Opened the news site")          
 
@@ -61,7 +59,7 @@ class NewsExtractor:
     def enter_search_phrase(self):
         # Enter the search phrase
         searchbar = self.browser.find_element(loc.searchbar_xpath)
-        searchbar = WebDriverWait(self.browser, 30).until(
+        searchbar = WebDriverWait(self.browser, 10).until(
                 EC.element_to_be_clickable(searchbar)
             )
         self.browser.input_text(searchbar, self.search_phrase)
@@ -104,69 +102,21 @@ class NewsExtractor:
     def extract_articles_data(self):
         """Extract data from news articles"""
         articles = self.browser.get_webelements(loc.articles_xpath)
-        # print(articles)
-        for i, r in enumerate(articles):
-            print(i)
-            print(r)
-            print(r.find_element(By.XPATH, loc.article_title_xpath).text)
-            print(r.find_element(By.XPATH, loc.article_description_xpath).text)
-            print(r.find_element(By.XPATH, loc.article_date_xpath).text)
-            print()
-            # print(r.find_element(By.XPATH, loc.article_image_xpath))
-            # Capture and convert date string to datetime object
-            # try:
-            #     raw_date = WebDriverWait(self.browser.driver, 20).until(
-            #         EC.presence_of_element_located((By.XPATH, loc.article_date_xpath))
-            #     )
-            #     raw_date = r.find_element(By.XPATH, loc.article_date_xpath).text
-            # # Interact with the element
-            # except StaleElementReferenceException:
-            #     # The element might have been removed or the page refreshed
-            #     # Try to find the element again
-            #     raw_date = r.find_element(By.XPATH, loc.article_date_xpath).text
-            #     # Now you can interact with the element
-
-            raw_date = WebDriverWait(self.browser.driver, 20).until(
-                EC.presence_of_element_located((By.XPATH, loc.article_date_xpath))
-            )
-            raw_date = r.find_element(By.XPATH, loc.article_date_xpath).text
-            date = Utils.date_formatter(date_str=raw_date)
+        
+        for r in articles:
+            browser = self.browser.driver
             months = self.months
-            valid_date = Utils.date_checker(date_to_check=date, months=months)
+
+            # Capture and convert date string to datetime object
+            date, valid_date = Utils.date_extraction_and_validation(browser=browser, months=months, article=r)
 
             if (valid_date):
-                try:
-                    title = WebDriverWait(self.browser.driver, 20).until(
-                        EC.presence_of_element_located((By.XPATH, loc.article_title_xpath))
-                    )
-                    title = r.find_element(By.XPATH, loc.article_title_xpath).text
-                except:
-                    title = 'title not found'
+                title = Utils.title_extraction(browser=browser, article=r)
 
-                try:
-                    description = WebDriverWait(self.browser.driver, 20).until(
-                        EC.presence_of_element_located((By.XPATH, loc.article_description_xpath))
-                    )
-                    description = r.find_element(By.XPATH, loc.article_description_xpath).text
-                except:
-                    description = 'description not found'
+                description = Utils.description_extraction(article=r)
 
                 # Download picture if available and extract the filename
-                try:
-                    e_img = r.find_element(By.XPATH, loc.article_image_xpath)
-                    print(f"Encontrou imagem: {e_img}")
-                except:
-                    picture_url = ''
-                    picture_filename = ''
-                    print("Não encontrou imagem!")
-                else:
-                    picture_url = e_img.get_attribute("src")
-                    if self.local:
-                        picture_filename = Utils.LOCAL_download_picture(picture_url)
-                    else:
-                        picture_filename = Utils.download_picture(picture_url)
-                    print(f"URL da imagem: {picture_url}")
-                    print(f"Nome do arquivo: {picture_filename}")
+                picture_filename = Utils.picture_extraction(self.local, article=r)
 
                 # Count search phrase occurrences in title and description
                 count_search_phrases = (title.count(self.search_phrase) + description.count(self.search_phrase))
